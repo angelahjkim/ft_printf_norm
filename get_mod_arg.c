@@ -6,7 +6,7 @@
 /*   By: angkim <angkim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 15:29:47 by angkim            #+#    #+#             */
-/*   Updated: 2019/09/06 22:04:37 by angkim           ###   ########.fr       */
+/*   Updated: 2019/09/08 16:20:32 by angkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	get_mod_arg_u(t_format *f, va_list args)
 	if (f->mod == 0)
 		f->u_arg = (unsigned int)va_arg(args, unsigned int);
 	else if (f->mod & M_L)
-		f->u_arg = va_arg(args, uint64_t);
+		f->u_arg = (unsigned long)va_arg(args, uint64_t);
 	else if (f->mod & M_LL)
 		f->u_arg = (unsigned long long)va_arg(args, unsigned long long);
 	else if (f->mod & M_H)
@@ -45,7 +45,7 @@ void	get_mod_arg_ox_xx(t_format *f, va_list args)
 	if (f->mod == 0)
 		f->ox_arg = (unsigned int)va_arg(args, unsigned int);
 	else if (f->mod & M_L)
-		f->ox_arg = (unsigned long)va_arg(args, unsigned long);
+		f->ox_arg = va_arg(args, uint64_t);
 	else if (f->mod & M_LL)
 		f->ox_arg = (unsigned long long)va_arg(args, unsigned long long);
 	else if (f->mod & M_H)

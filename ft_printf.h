@@ -6,7 +6,7 @@
 /*   By: angkim <angkim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 21:54:08 by angkim            #+#    #+#             */
-/*   Updated: 2019/09/07 17:02:33 by angkim           ###   ########.fr       */
+/*   Updated: 2019/09/08 16:21:30 by angkim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ void			ft_putchar(char c);
 void			ft_putstr(char const *s);
 void			ft_puthex_lower(uint64_t n);
 void			ft_puthex_upper(uint64_t n);
-void			ft_putoctal(unsigned int n);
+void			ft_putoctal(uint64_t n);
 void			ft_puthex_long(long n);
 void			ft_hexlen(long n, int *count);
 void			ft_putnbr(intmax_t n);
